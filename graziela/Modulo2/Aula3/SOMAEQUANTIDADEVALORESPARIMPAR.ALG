@@ -1,8 +1,10 @@
 algoritmo "SomaEQuantidadeValoresParImpar"
 var
-   i, numero, somaPar, somaImpar, qtdPar, qtdImpar : inteiro
+   i, numero, qtd, somaPar, somaImpar, qtdPar, qtdImpar : inteiro
 inicio
-      para i de 1 ate 100 passo 1 faca
+      Escreva("Digite a quantidade de elementos que deseja: ")
+      Leia(qtd)
+      para i de 1 ate qtd passo 1 faca
            Escreva("Digite um número: ")
            leia(numero)
            se numero MOD 2 = 0 entao
