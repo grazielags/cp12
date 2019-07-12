@@ -6,8 +6,8 @@ inicio
       leia(base)
       escreva("Digite o expoente: ")
       leia(expoente)
-      resultado <- base
-      para i de 1 ate (expoente - 1) passo 1 faca
+      resultado <- 1
+      para i de 1 ate expoente passo 1 faca
            resultado <- (resultado * base)
       fimpara
       escreval(resultado)
