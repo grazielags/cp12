@@ -3,8 +3,9 @@ Algoritmo "semnome"
 //apresente a idade média das 10 pessoas, a maior idade e a menor
 //idade.
 Var
-   soma,media,maior,menor,i,idade: inteiro
-
+   soma,maior,menor,i,idade: inteiro
+        media:real
+        
 
 Inicio
    para i de 0 ate 9 passo 1 faca
