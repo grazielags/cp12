@@ -1,14 +1,16 @@
 Algoritmo "Aula 3 - exercicio 1"
-
+//1. Escrever um algoritmo que leia o nome e as três notas obtidas por
+//um aluno durante o semestre. Calcular a sua média (aritmética),
+//informar o nome e sua menção aprovado (media >= 7),
+//Reprovado (media < 7).
 Var
- nome1, nome2:caractere
- nota1, nota2, nota3, media:real
- num1, num2: inteiro
 
+ nome:caractere
+ nota1, nota2, nota3, media:real
 
 Inicio
      escreva ("Qual nome?: ")
-     leia(nome1)
+     leia(nome)
      escreva ("digite nota1: ")
      leia(nota1)
       escreva ("digite nota2: ")
@@ -16,11 +18,11 @@ Inicio
       escreva ("digite nota3: ")
      leia(nota3)
      media <- (nota1+nota2+nota3)/3
-     escreva(media)
+     escreval("sua media foi" media,)
      se media > 7 entao
-     escreval(" Aprovado")
+     escreval(nome, " Aprovado!")
      senao
-     escreval(" Reprovado")
+     escreval(nome, " Reprovado!")
      fimse
 
 Fimalgoritmo

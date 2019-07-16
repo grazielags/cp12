@@ -5,16 +5,32 @@ Algoritmo "Aula 3 - exercicio 6"
 //de notas necessárias.
 Var
 
-   notas100, valor: inteiro
+   notas100, notas50, notas10, notas1, valor: inteiro
 
 Inicio
    escreva ("digite um valor: ")
    leia(valor)
    se (valor / 100) > 0 entao
       notas100 <- valor div 100
-   valor <- valor mod 100
-      FIMSE
-      escreval ("notas de 100: ", notas100
-      escreval ("valor: ", valor)
-      
+      valor <- valor mod 100
+   FIMSE
+   se (valor / 50) > 0 entao
+      notas50 <- valor div 50
+      valor <- valor mod 50
+   FIMSE
+   se (valor / 10) > 0 entao
+      notas10 <- valor div 10
+      valor <- valor mod 10
+   FIMSE
+   se valor > 0 entao
+      notas1 <- valor
+
+   FIMSE
+   escreval ("quantidade de notas de 100: ", notas100)
+   escreval ("quantidade de notas de 50: ", notas50)
+   escreval ("quantidade de notas de 10: ", notas10)
+   escreval ("quantidade de notas de 1: ", notas1)
+   escreval ("valor: ", valor)
+
+
 Fimalgoritmo
