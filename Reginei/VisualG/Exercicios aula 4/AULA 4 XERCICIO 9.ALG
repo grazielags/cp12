@@ -12,11 +12,18 @@ Algoritmo "aula 4 xercicio 9"
 
 Var
 
-
+   sexo, corolhos, :caractere
+   idade, i :inteiro
 
 Inicio
 
-
+   escreva("Digite o sexo (F/M): ")
+   leia(sexo)
+   escreva("Digite a cor dos olhos A(azul) V(verde) C(castanho): ")
+   leia(corolhos)
+   escreva("Digite a idade: ")
+   leia(idade)
+   
 
 
 Fimalgoritmo

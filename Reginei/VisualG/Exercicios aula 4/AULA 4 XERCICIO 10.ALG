@@ -11,11 +11,28 @@ Algoritmo "aula 4 xercicio 10"
 
 Var
 
-
+   nome, cargo:caractere
+   salariobruto, gratificacao, salariodesconto:real
+   idade: inteiro
 
 Inicio
 
-
+   escreva("Digite o nome do funcionario: ")
+   leia (nome)
+   escreva("Digite o cargo: ")
+   leia (cargo)
+   escreva("Digite o salario: ")
+   leia (salarioBruto)
+   escreva("Digite a idade: ")
+   leia (idade)
+   salariobruto <- salariobruto * 1.38
+   gratificacao <- salariobruto * (20/100)
+   salariodesconto <- (salariobruto +gratificacao) * 0.85
+   escreval
+   escreval("nome: ", nome)
+   escreval("cargo: ", cargo)
+   escreval("salario bruto: ", salariobruto)
+   escreval("salario liquido: ", salariodesconto)
 
 
 Fimalgoritmo
