@@ -7,7 +7,7 @@ Algoritmo "aula 4 xercicio 8"
 
 Var
 
-   i, valor, parcela: inteiro
+   i, valor, parcela, desconto, acrescimo1, acrescimo2: inteiro
 
 Inicio
    para i de 1 ate 1    faca
@@ -16,8 +16,12 @@ Inicio
       escreva("Digite a quantidade de parcelas: ")
       leia (parcela)
       se parcela = 1 entao
-         parcela<- valor -
-         fimse
+         desconto<- ((i div 10) * 9)
+         se parcela = 2 ou parcela > 2 ou parcela = < 5
+         acrescimo1<- ((i div 20) + i)
+         
+      fimse
+      escreva("valor com desconto", desconto)
       fimpara
 
 
