@@ -3,11 +3,25 @@ Algoritmo "EXERCICIO 5 - A6 - M2D5"
 
 
 Var
-// Seção de Declarações das variáveis 
+notas: vetor [0..9, 0..4] de inteiro
+l, c: inteiro
 
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+para l de 0 ate 9 passo 1 faca
+     para c de 0 ate 4 passo 1 faca
+          escreva ("Digite uma nota [", l, "][", c, "]")
+          leia (notas[l, c])
+     fimpara
+fimpara
+limpatela
+
+para l de 0 ate 9 passo 1 faca
+     para c de 0 ate 4 passo 1 faca
+          escreva ("Nota [", l, "][", c, "]:", notas[l, c])
+          leia (notas[l, c])
+     fimpara
+fimpara
 
 
 Fimalgoritmo

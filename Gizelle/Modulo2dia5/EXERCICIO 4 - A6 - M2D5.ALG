@@ -5,11 +5,22 @@ Algoritmo "EXERCICIO 4 - A6 - M2D5"
 
 
 Var
-// Seção de Declarações das variáveis 
+valores: vetor [0..4,0..4] de inteiro
+l, c, soma : inteiro
+// assim que declara a soma aqui ela já temo valor de zero por isso
+// lá embaixo não preciso informar soma<- 0 antes de tudo
 
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+para l de 0 ate 4 passo 1 faca
+     para c de 0 ate 4 passo 1 faca
+          escreva ("Digite valor (", l, ") (", c, ")")
+          leia (valores [l, c])
+          soma <- soma + valores [l, c]
+     fimpara
+fimpara
 
+escreval (" ")
+escreval ("soma dos valores é: ", soma)
 
 Fimalgoritmo

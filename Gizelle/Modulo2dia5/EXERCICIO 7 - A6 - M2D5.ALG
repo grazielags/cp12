@@ -5,11 +5,26 @@ Algoritmo "EXERCICIO 7 - A6 - M2D5"
 
 
 Var
-// Seção de Declarações das variáveis 
-
+   numeros : vetor [0..3, 0..3] de inteiro
+   l, c, soma: inteiro
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+
+   para l de 0 ate 3 passo 1 faca
+      para c de 0 ate 3 passo 1 faca
+         numeros[l, c] <- l + c
+   // se fosse multiplicação seria <- l * c
+   // ou poderia marcar uma matriz com valor unico seria <- 100 (por exemplo)
+      fimpara
+   fimpara
+   
+   limpatela
+   
+   para l de 0 ate 3 passo 1 faca
+      para c de 0 ate 3 passo 1 faca
+         escreval("Numero", l, " +", c, " = ", numeros[l, c])
+      fimpara
+   fimpara
 
 
 Fimalgoritmo

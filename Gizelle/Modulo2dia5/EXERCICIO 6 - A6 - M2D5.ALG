@@ -5,11 +5,26 @@ Algoritmo "EXERCICIO 6 - A6 - M2D5"
 
 
 Var
-// Seção de Declarações das variáveis 
-
+numeros : vetor [0..3, 0..3] de inteiro
+l, c, linha, soma : inteiro
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+para l de 0 ate 3 passo 1 faca
+     para c de 0 ate 3 passo 1 faca
+          escreva ("Digite um número [", l, "][", c, "]")
+          leia (numeros[l, c])
+     fimpara
+fimpara
 
+limpatela
+
+escreva ("Digita a linha (0 a 3)que deseja apresentar a soma dos numeros: ")
+leia (linha)
+// como a linha já existe, preciso variar somente nas colunas
+para c de 0 ate 3 passo 1 faca
+     soma <- soma + numeros[linha, c]
+fimpara
+
+escreval ("Soma dos valores de linha:", linha, " é: ", soma)
 
 Fimalgoritmo
