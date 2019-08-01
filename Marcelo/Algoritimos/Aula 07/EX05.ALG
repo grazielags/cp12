@@ -1,4 +1,6 @@
 Algoritmo "semnome"
+// Disciplina  :  [Linguagem e Lógica de Programação] 
+// Professor   : Antonio Carlos Nicolodi 
 // Crie um menu com as opções:
 //1 - Inserir
 //2 - Exibir
