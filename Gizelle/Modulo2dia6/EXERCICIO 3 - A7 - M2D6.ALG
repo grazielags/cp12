@@ -22,6 +22,8 @@ leia (num1)
 escreva("Digite segundo número: ")
 leia (num2)
 
+// está errado pq o se deveria estardentro da função.
+
    se num1 > num2 entao
       escreval (comparacao())
       senao

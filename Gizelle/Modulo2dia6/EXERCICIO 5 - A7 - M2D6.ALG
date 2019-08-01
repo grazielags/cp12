@@ -3,32 +3,32 @@ Algoritmo "EXERCICIO 5 - A7 - M2D6"
 // de 10 posições e outro que realize a soma dos valores deste vetor e
 // apresente o valor total na tela.
 
- // não deu ainda
  
 var
-proc1 : vetor [0..2] de inteiro
-i : inteiro
-soma: inteiro
+i, soma : inteiro
+numeros : vetor [0..9] de inteiro
 
-
-procedimento (proc1)
+procedimento preencher()
 Inicio
-   para i de 0 ate 9 passo 1 faca
-   escreval ("Digite um número: ")
-   leia (proc1[i])
+   para i de 0 ate 9 faca
+      escreva ("Digite um número: ")
+      leia (numeros[i])
+   fimpara
 fimprocedimento
 
-
-procedimento (proc2)
-Inicio
-   soma <- soma + proc1[i]
-
+procedimento somar()
+inicio
+    para i de 0 ate 9 faca
+         soma <- soma + numeros[i]
+    fimpara
 fimprocedimento
-
-
 
 inicio
 
-     
+ preencher()
+ somar()
+ escreval("")
+ escreva ("A soma dos elementos do vetor é:", soma)
+ escreval("")
 
 Fimalgoritmo
