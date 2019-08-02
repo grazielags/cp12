@@ -8,17 +8,19 @@ Algoritmo "aula 6 exercicio 7"
 
 Var
    valor: vetor [0..3,0..3] de inteiro
-   l, c, soma: inteiro
+   l, c : inteiro
 
 Inicio
 
    para l de 0 ate 3 passo 1 faca
       para c de 0 ate 3 passo 1 faca
-         soma<- l + c
-         escreval("A soma de ", l, " +", c, " = ",soma)
+         valor[l, c] <- l + c
+      fimpara
+   fimpara
+   para l de 0 ate 3 passo 1 faca
+      para c de 0 ate 3 passo 1 faca
+         escreval("A soma de [", l, "] + [", c, "]", valor[l,c])
       fimpara
    fimpara
 
-
-
-Fimalgoritmo
+fimalgoritmo
