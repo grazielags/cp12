@@ -4,13 +4,13 @@ Algoritmo "aula 6 exercicio 4"
 //elementos da matriz e apresentar o resultado na tela.
 
 Var
-   valor: vetor [1..5, 1..5] de inteiro
+   valor: vetor [0..4, 0..4] de inteiro
    l, c, soma: inteiro
 
 Inicio
 
-   para l de 1 ate 5 passo 1 faca
-      para c de 1 ate 5 passo 1 faca
+   para l de 0 ate 4 passo 1 faca
+      para c de 0 ate 4 passo 1 faca
          Escreva("Digite um valor para Linha",l, " e Coluna",c, ": ")
          Leia(valor[l, c])
          soma <- soma + valor[l, c]
