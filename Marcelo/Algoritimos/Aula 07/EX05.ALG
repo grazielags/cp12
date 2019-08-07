@@ -1,47 +1,30 @@
 Algoritmo "semnome"
-// Disciplina  :  [Linguagem e Lógica de Programação] 
-// Professor   : Antonio Carlos Nicolodi 
-// Crie um menu com as opções:
-//1 - Inserir
-//2 - Exibir
-//3 - Sair
-//Crie um procedimento para inserir e um para exibir conteúdo do vetor
-// e ao digitar a opção 3 deve parar de executar o algoritmo.
+//  Escreva um algoritmo com 2 procedimentos, um para preencher o vetor de 10
+//posições e outro que realize a soma dos valores deste vetor
+//e apresente o valor total na tela.
+
 Var
-   i,opcao: inteiro
-   numero : vetor [0..3] de inteiro
+   i,soma: inteiro
+   numero : vetor [0..9] de inteiro
 
 procedimento inserir ()
 inicio
-   para i de 0 ate 3  faca
+   para i de 0 ate 9  faca
       Escreval("Escreva os  valores")
       leia(numero [i])
    fimpara
 fimprocedimento
 
-procedimento exibir ()
+procedimento somar ()
 inicio
-   para i de 0 ate 3  faca
-      Escreval (numero[i])
+   para i de 0 ate 9  faca
+      soma<- soma+numero[i]
    fimpara
 fimprocedimento
 
 Inicio
-   enquanto opcao <> 3 faca
-      Escreval ("OPÇÕES" )
-      Escreval ("[1]Inserir ")
-      Escreval ("[2]Exibir" )
-      Escreval ("[3]Sair")
-      leia(opcao)
-      escolha opcao
-      caso 1
-         inserir ()
-      caso 2
-         exibir ()
-      caso 3
-         escreva("Saindo!!!")
-      outrocaso
-         escreva("Opção inválida!")
-      fimescolha
-   fimenquanto
+    inserir ()
+    somar ()
+    Escreval ("A soma é ",soma )
+
 Fimalgoritmo
