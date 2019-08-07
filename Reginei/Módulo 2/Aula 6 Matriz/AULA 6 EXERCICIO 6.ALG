@@ -6,23 +6,24 @@ Algoritmo "aula 6 exercicio 6"
 //informada.
 
 Var
-   valor: vetor [1..4, 1..4] de inteiro
-   l, c, somaLinha: inteiro
+   valor: vetor [0..3, 0..3] de inteiro
+   l, c, linha, somaLinha: inteiro
 
 Inicio
 
-   para l de 1 ate 4 passo 1 faca
-      para c de 1 ate 4 passo 1 faca
+   para l de 0 ate 3 passo 1 faca
+      para c de 0 ate 3 passo 1 faca
          escreva("Digite o valor", l, " x", c, ": ")
          Leia(valor[l, c])
-
       fimpara
    fimpara
-      para l de 1 ate 1 passo 1 faca
-   Escreva("Digite a linha a ser somada: ")
-   leia(valor[l,c])
-   somaLinha<-somaLInha + valor[l]
+   limpatela
+
+   Escreva("Digite a linha de (0 a 3) a ser somada: ")
+   leia(linha)
+   para c de 0 ate 3 passo 1 faca
+      somaLinha <- somaLinha + valor[linha, c]
+   fimpara
    escreval("A soma da linha é: ",somaLinha)
 
-   fimpara
 Fimalgoritmo
