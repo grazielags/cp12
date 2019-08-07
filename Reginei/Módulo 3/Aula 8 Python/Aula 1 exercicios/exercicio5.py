@@ -15,3 +15,12 @@ else:
        print('Os numeros digitados:',numero1,'e',numero2,'são Diferentes! ')
 
 
+'''
+a = int(input("Digite um Número: "))
+b = int(input("Digite outro Número: "))
+
+print(a, " = ", b,"?", a==b)
+
+'''
+
+

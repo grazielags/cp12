@@ -10,12 +10,27 @@
 '''
 
 A = int(input('Digite o valor de A: '))
-print(A)
 B = int(input('Digite o valor de B: '))
-print(B)
 
 C = A , B = B , A
 
 print('Os novos valores de A e B são:' ,C)
+
+
+
+'''
+A = int(input('Digite o valor de A: '))
+B = int(input('Digite o valor de B: '))
+
+C = A
+A = B
+B = C
+
+print('A = ', A, '\nb = ', B )
+
+'''
+
+
+
 
 
