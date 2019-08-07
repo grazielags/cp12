@@ -1,10 +1,14 @@
-﻿numero1= int(input("Escreva um numero !"))
-print (num1)
-numero2= int(input("Escreva outro numero!"))
-print (num2)
+﻿'''Faça um programa que
+leia um número inteiros e informe se esse número é par ou ímpar. 
+'''
 
-if num1 == num2:
-print("O", num1,"é igual ao ",num2)
-else:
-print("O", num1,"é diferente do ",num2)
+numero1= int(input("Escreva um numero !"))
+
+
+
+if numero1 %2==0:        
+    print("O", numero1,"é igual par ")
+    
+elif numero1 %2==1:
+    print("O", numero1,"é impar ")
 
