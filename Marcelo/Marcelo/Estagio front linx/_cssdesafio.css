@@ -1,0 +1,163 @@
+body{
+    font-size: 18px bold ;
+    text-align: center;
+    color: #888888;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+section#cabecalho{
+    position: relative;
+    top: 0px;
+    background-color: #707070;
+    color: #ffffff;
+    border: #707070 1px;
+
+}
+
+
+div#interface {
+    background-color: #ffffff, 100%;
+
+}
+
+.btn-inicial{
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #888888;
+    border: none ;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    margin: 40px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    background: #ffffff;
+}
+
+.btn-comprar{
+    background: #ffffff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    margin: 40px;
+}
+
+.btn-produtos{
+    background: #ffffff;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    cursor: pointer;
+    
+}
+    
+
+li{
+    color: #888888;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2#titulo-cabecalho {
+    font-size: 20px;
+    text-align: center;
+    font-family: Helvetica Neue, Regular;
+    margin-top: 0px;
+    
+}
+
+h1#titulo-cabecalho{
+    font-size: 40px;
+    text-align: center;
+    font-family: Neue Helvetica, Bold;
+    color: #ffffff;
+}
+
+
+h3#titulo-cabecalho{
+    font-size: 14px;
+    text-align: center;
+    font-family: Helvetica Neue, Regular;
+    
+}
+
+p{
+    font-size: 12px;
+    font-family: Neue Helvetica, regular;
+    text-align: left;
+    color: #888888
+}
+
+p#nome-produto{
+    font-size: 14px;
+    font-family: Neue Helvetica, Regular;
+    text-align: left;
+    color: #888888;
+}
+
+
+p#preco-negrito{
+    font-size: 16px;
+    font-family:Neue Helvetica,  bold;
+    text-align: left;
+    color: #888888;
+}
+
+h1{
+
+    font-size: 18px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #888888;
+}
+
+nav#produtos-corpo li{
+    list-style: none;
+    display: inline-block;
+
+
+}
+
+
+
+
+
+
+h1#final{
+    border: #707070 ;
+    text-align: center;
+    font-size: 16px;
+    font-family:  Helvetica,Regular;
+    color: #888888;
+
+}
+
+
+footer#rodape p{
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+
+section#rodape{
+    position: relative;
+    background-color: #707070;
+    height: 200px;
+}
