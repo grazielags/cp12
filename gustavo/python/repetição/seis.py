@@ -5,4 +5,4 @@ for x in range (0, 5):
     soma += num
 print("Soma igual a: ", soma)
 media = soma/5
-print("Media: ", media)
+print("Media: ", (media))
