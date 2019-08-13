@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./cssdesafio.css" />
+    <script type="text/javascript" src="./javascript.js"></script>
+    <script>
+        getDados(1);
+    </script>
+</head>
+
+<body>
+    <div id="interface">
+        <section id="cabecalho">
+            <h2 id="titulo-cabecalho"> Uma seleção de produtos</h2>
+            <h1 id="titulo-cabecalho">Especial para você</h1>
+            <h3 id="titulo-cabecalho">Todos os produtos desta lista foram selecionados a partir da sua navegação. oAproveite!</h3>
+            <button class="btn-inicial"> conheça a linx</button>
+            <button class="btn-inicial">  ajude o algoritimo </button>
+            <button class="btn-inicial">  Seus produtos  </button>
+            <button class="btn-inicial">  compartilhe </button>
+        </section>
+        <h1>Sua seleção especial</h1>
+        <nav id="produtos-corpo">
+        </nav>
+        <button class="btn-produtos" onclick="getDados(page+1)"><h1 id="final">Ainda mais produtos aqui!</h1></button>
+        <div class="news">
+            <h1> Compartilhe a novidade </h1>
+            <p class="newsTitulo">
+                Quer que seus amigos também ganhem a lista personalizada deles? Preencha agora! Nome do seu amigo:
+            </p>
+            <div class="newsConteudo">
+                <div class="newsConteudoNome">
+                    <div>
+                        <label class="newsConteudoLabelNome">Nome do seu amigo:</label>
+                        <label>E-mail:</label>
+                    </div>
+                    <div>
+                        <input class="newsConteudoNome" type="text" size="40">
+                        <input type="text" size="40">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button class="btn-produtos"><h1 id="final"> Envie agora</h1></button>
+            </div>
+        </div>
+
+        <section id="rodape">
+            <footer id="rodape">
+                <p> Testando suas habilidades em html, css e js.<br> linx impulse<br> 2019
+                </p>
+            </footer>
+        </section>
+    </div>
+</body>
+
+</html>
