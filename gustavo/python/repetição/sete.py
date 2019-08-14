@@ -7,9 +7,9 @@ for x in range (0, quantidade):
 print("Media de idade: ", media/quantidade)
 classificacao = media/quantidade
 if classificacao >= 0 and classificacao <= 25:
-    classificacao = "Jovem"
+    classificacao = " Turma jovem!"
 elif classificacao >= 26 and classificacao <= 60:
-    classificacao = "Adulto"
-else:
-    classificacao = "Idoso"
+    classificacao = "Turma adulta!"
+elif classificacao > 60:
+    classificacao = "Turma idosa!"
 print("Classificação: ", classificacao)
