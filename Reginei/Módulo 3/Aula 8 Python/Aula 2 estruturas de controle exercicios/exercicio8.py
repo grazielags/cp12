@@ -42,13 +42,27 @@ if pergunta5 == 1:
 
 if soma == 2 or soma == 1:
        print("Você é suspeito!")
-if soma == 3 or soma == 4:
+elif soma == 3 or soma == 4:
        print("Você é Cúmplice!")
-if soma == 5:
+elif soma == 5:
        print("Você é A1ssassino!")
-else:
-       soma != 1 or soma != 2 or soma != 3 or soma != 4 or soma != 5
-print("Você é Inocente!")
+elif soma != 1 or soma != 2 or soma != 3 or soma != 4 or soma != 5:
+       print("Você é Inocente!")
+
+
+'''
+
+if soma = pergunta1 + pergunta2 + pergunta3 + pergunta4 + pergunta5:
+
+if soma == 2 or soma == 1:
+       print("Você é suspeito!")
+elif soma == 3 or soma == 4:
+       print("Você é Cúmplice!")
+elif soma == 5:
+       print("Você é A1ssassino!")
+elif soma != 1 or soma != 2 or soma != 3 or soma != 4 or soma != 5:
+       print("Você é Inocente!")
+'''
 
 
 
