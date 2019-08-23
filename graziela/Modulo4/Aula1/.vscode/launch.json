@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - ExemploTeclado",
+            "request": "launch",
+            "mainClass": "ExemploTeclado",
+            "projectName": "Aula1_a9f0a406"
+        }
+    ]
+}
