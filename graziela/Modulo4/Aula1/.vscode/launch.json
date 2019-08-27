@@ -2,6 +2,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ExemploTecladoJOptionPane",
+            "request": "launch",
+            "mainClass": "ExemploTecladoJOptionPane",
+            "projectName": "Aula1_a9f0a406"
+        },
+        {
+            "type": "java",
             "name": "CodeLens (Launch) - ExemploTeclado",
             "request": "launch",
             "mainClass": "ExemploTeclado",
