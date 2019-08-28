@@ -1,5 +1,7 @@
 package Aula2;
 
+import javax.swing.JOptionPane;
+
 public class Exercicio3 {
 	public static void main(String[] args) {
 		/*
@@ -9,5 +11,13 @@ public class Exercicio3 {
 		 * se a pessoa digitou a letra F,
 		 * e Masculino se a pessoa digitou a letra M.
 		 */
+		char sexo = JOptionPane.showInputDialog("Digite F - Feminino ou M - Masculino!").toUpperCase().charAt(0);
+		if (sexo == 'F') {
+			JOptionPane.showMessageDialog(null, "Feminino!");
+		} else if (sexo == 'M') {
+			JOptionPane.showMessageDialog(null, "Masculino!");
+		} else {
+			JOptionPane.showMessageDialog(null, "Sexo inválido!");
+		}
 	}
 }
