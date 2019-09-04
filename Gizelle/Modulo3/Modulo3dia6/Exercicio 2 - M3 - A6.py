@@ -36,4 +36,4 @@ media = (nota1 + nota2)/2
 
 resultado(media)
 print("resultado2")
-print(resultado2(media))
+print(resultado2(media)

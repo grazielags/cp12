@@ -12,11 +12,11 @@ matriz = []
 for linha in range(3):
     linhaMatriz = []
     for coluna in range(3):
-        linhaMatriz.append(int(input("Digite umnúmero: ")))
+        linhaMatriz.append(int(input("Digite um número: ")))
     matriz.append(linhaMatriz)
 print(matriz)
 
-numero = int(input("Digite o n[umero que deseja multiplicar a diagonal principal: "))
+numero = int(input("Digite o número que deseja multiplicar a diagonal principal: "))
 
 
 for linha in range(3):

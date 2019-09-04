@@ -14,20 +14,25 @@ for linha in range(6):
         linhaMatriz.append(int(input("Digite um número: ")))
 
         if linha == 0 and coluna == 0:
-            maiorElemento = linha Matriz[coluna]
-            menorElemento = inha Matriz[coluna]
+            maiorElemento = linhaMatriz[coluna]
+            menorElemento = linhaMatriz[coluna]
             maiorLinhaPosicao = linha
             maiorColunaPosicao = linha
             menorLinhaPosicao = coluna
             menorColunaPosicao = coluna
-        else
-            linhaMatriz[coluna] > maiorElemento
-            maiorElemento = linha Matriz[coluna]
-            menorElemento = inha Matriz[coluna]
-            maiorLinhaPosicao = linha
-            maiorColunaPosicao = linha
-            menorLinhaPosicao = coluna
-            menorColunaPosicao = coluna
+        else:
+            if linhaMatriz[coluna] > maiorElemento:
+                maiorElemento = linhaMatriz[coluna]
+                maiorLinhaPosicao = linha
+                maiorColunaPosicao = coluna
+            if linhaMatriz[coluna] < menorElemento:
+                menorElemento = linhaMatriz[coluna]
+                menorLinhaPosicao = linha
+                menorColunaPosicao = coluna
+    matriz.append(linhaMatriz)
             
             
-pegar commit
+print('Matriz: ')
+print(matriz)
+print('Maior elemento: ', maiorElemento, ' - Linha: ', maiorLinhaPosicao, ' - Coluna: ', maiorColunaPosicao)
+print('Menor elemento: ', menorElemento, ' - Linha: ', menorLinhaPosicao, ' - Coluna: ', menorColunaPosicao)

@@ -1,6 +1,6 @@
 import javax.swing.JOptionPane;
 
-public class Exercicio12M4A2 {
+public class teste {
 
 	public static void main(String[] args) {
 // Crie uma calculadora usando a instrução SWITCH, que pergunte qual das operações básicas quer fazer (+, -, * e /), 
@@ -18,19 +18,10 @@ public class Exercicio12M4A2 {
 			break;
 		case '-':
 			total = num1 - num2;
-			JOptionPane.showMessageDialog(null,"Resultado da subtração: " + num1 + " - " + num2 + " = " + total);
-			break;
-		case '*':
-			total = num1 * num2;
-			JOptionPane.showMessageDialog(null,"Resultado da multiplicação: " + num1 + " * " + num2 + " = " + total);
-			break;
-		case '/':
-			total = num1 / num2;
-			JOptionPane.showMessageDialog(null,"Resultado da divisão: " + num1 + " / " + num2 + " = " + total);
+			JOptionPane.showMessageDialog(null,"Resultado da soma: " + num1 + " + " + num2 + " = " + total);
 			break;
 		default:
-			JOptionPane.showMessageDialog(null,"Opção inválida");
+			System.out.println("Opção inválida");
 		}
-
 	}
 }

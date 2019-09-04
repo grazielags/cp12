@@ -18,7 +18,6 @@ public class Exemplo3 {
 			break;
 		default:
 			System.out.println("Opção inválida");
-
 		}
 	}
 }
