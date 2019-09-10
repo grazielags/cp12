@@ -15,3 +15,22 @@ soma = (num1+num2+num3+num4+num5)
 media = soma/5
 
 print ("A soma dos 5 números é: ", soma, " e a média é: ",media)
+
+
+
+"""
+
+Correção em sala:
+
+        soma = 0.0
+        media = 0.0
+
+        for i in range (0,5,1)
+            numero = int(input("Digite um número: "))
+            soma = soma + numero
+
+        media = soma/5
+        print("soma é: ", soma "\ne média é: ", media)
+
+
+"""

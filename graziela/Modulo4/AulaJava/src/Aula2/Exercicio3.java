@@ -17,7 +17,7 @@ public class Exercicio3 {
 		} else if (sexo == 'M') {
 			JOptionPane.showMessageDialog(null, "Masculino!");
 		} else {
-			JOptionPane.showMessageDialog(null, "Sexo inv√°lido!");
+			JOptionPane.showMessageDialog(null, "Sexo inv·lido!");
 		}
 	}
 }
