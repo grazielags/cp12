@@ -1,6 +1,7 @@
 """
 
-2) Imprimir a soma de todos os números pares entre dois números solicitados para o usuário.
+2) Imprimir a soma de todos os números pares entre dois números solicitados
+para o usuário.
 
 """
 
