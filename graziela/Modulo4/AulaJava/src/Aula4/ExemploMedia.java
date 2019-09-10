@@ -16,7 +16,7 @@ public class ExemploMedia {
 		
 		String resultado = "Valores do vetor: ";
 		for (int posicao = 0; posicao < idades.length; posicao++) {
-			resultado = resultado + "\n" + idades[posicao];
+			resultado = resultado + "\n" + posicao + " - " + idades[posicao];
 		}
 		
 		JOptionPane.showMessageDialog(null, resultado + 
