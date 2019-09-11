@@ -6,8 +6,14 @@ public class M4A3exercicio6 {
 
 	public static void main(String[]args) {
 		
-		
-			
-		JOptionPane.showMessageDialog(null, "L");
+		int num = Integer.parseInt(JOptionPane.showInputDialog("Digite a quantidade de valores que deseja ler: "));
+		for (int posicao = 1; posicao <= num; posicao++) {
+			int numero = Integer.parseInt(JOptionPane.showInputDialog("Digite o número que deseja saber o fatorial: "));
+			int fatorial = 1;
+			for (int numeroFatorial = numero; numeroFatorial > 0 ; numeroFatorial--) {
+				fatorial = fatorial * numeroFatorial;
+			}
+			JOptionPane.showMessageDialog(null, "O fatorial do número " + numero + " é " + fatorial);
+		}
 	}
 }

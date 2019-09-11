@@ -14,8 +14,55 @@ public class M4A3exercicio4 {
 
 	public static void main(String[]args) {
 		
-		
-			
-		JOptionPane.showMessageDialog(null, "L");
+		int voto = -1;
+		int totalVotosCandidato1 = 0;
+		int totalVotosCandidato2 = 0;
+		int totalVotosCandidato3 = 0;
+		int totalVotosCandidato4 = 0;
+		int totalVotosNulos = 0;
+		int totalVotosBrancos = 0;
+		while (voto != 0) {
+			voto = Integer.parseInt(JOptionPane.showInputDialog("Digite o seu voto:"
+																+ "\n1 - Candidato 1"
+																+ "\n2 - Candidato 2"
+																+ "\n3 - Candidato 3"
+																+ "\n4 - Candidato 4"
+																+ "\n5 - Voto nulo"
+																+ "\n6 - Voto em branco"
+																+ "\n0 - Sair"));
+
+
+		switch (voto) {
+		case 1:
+			totalVotosCandidato1++;
+			break;
+		case 2:
+			totalVotosCandidato2++;
+			break;
+		case 3:
+			totalVotosCandidato3++;
+			break;
+		case 4:
+			totalVotosCandidato4++;
+			break;
+		case 5:
+			totalVotosNulos++;
+			break;
+		case 6:
+			totalVotosBrancos++;
+			break;
+		case 0:
+			break;
+		default:
+			JOptionPane.showMessageDialog(null, "Voto inválido!");
+			break;
+		}
+		}
+		JOptionPane.showMessageDialog(null, "Total de votos candidato 1: " + totalVotosCandidato1 +
+											"\nTotal de votos candidato 2: " + totalVotosCandidato2 +
+											"\nTotal de votos candidato 3: " + totalVotosCandidato3 +
+											"\nTotal de votos candidato 4: " + totalVotosCandidato4 +
+											"\nTotal de votos nulos: " + totalVotosNulos +
+											"\nTotal de votos em branco: " + totalVotosBrancos);
 	}
 }
