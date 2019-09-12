@@ -6,7 +6,17 @@ public class M4A3exercicio2 {
 
 	public static void main(String[]args) {
 		
-		JOptionPane.showMessageDialog(null, ": ");
+		int numero = 0;
+		int contador = 0;
+		int somaNumero = 0;
+		while(numero >= 0) {
+			numero = Integer.parseInt(JOptionPane.showInputDialog("Digite um valor positivo para adicionar e um negativo para parar a contagem: "));
+			if (numero>= 0) {
+				somaNumero += numero;
+				contador++;
+			}
+		}
+		double media = somaNumero / (double) contador;
+		JOptionPane.showMessageDialog(null, "A média dos valores positivos digitados é: " + media);
 	}
 }
-
