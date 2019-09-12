@@ -4,8 +4,8 @@ import javax.swing.JOptionPane;
 
 public class ExemploMatriz {
 	public static void main(String args[]) {
-		int linhas = 19;
-		int colunas = 20;
+		int linhas = 2;
+		int colunas = 2;
 		int[][] notas = new int[linhas][colunas ];
 		double soma = 0;
 		double somaLinha = 0;
@@ -17,7 +17,7 @@ public class ExemploMatriz {
 //		notas[1][2] = 5;
 		String resultado = "Listagem das notas: ";
 		for (int linha = 0; linha < notas.length; linha++) {
-			resultado = resultado + "\n";
+			resultado = resultado + "\n" + linha + ": -> "; 
 			for (int coluna = 0; coluna < notas[linha].length; coluna++) {
 				notas[linha][coluna] = Integer.parseInt(JOptionPane.showInputDialog("Digite uma nota[" + linha + "][" + coluna + "]!"));
 				resultado = resultado + notas[linha][coluna] + "   ";
