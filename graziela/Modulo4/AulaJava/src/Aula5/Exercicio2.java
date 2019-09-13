@@ -6,5 +6,6 @@ public class Exercicio2 {
 		 * Escreva um programa para que mostre o menor e o maior valor de
 		 * uma matriz 4 x 4.
 		 */
+		
 	}
 }
