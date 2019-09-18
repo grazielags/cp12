@@ -13,10 +13,21 @@ public class M4A3exercicio7 {
 //  	}
 
 
-	public static void main(String[]args) {
+ 	public static void main(String[]args) {
+	
+ 		import java.util.Random;
+
 		
-		
+ 		public class ValorAleatorio {
+ 			
+ 			public static void main(String[] args) {
+ 				
+ 				int teste = (int)(Math.random() * 11);
+ 				System.out.println(teste);
+
+  			
 			
 		JOptionPane.showMessageDialog(null, "L");
-	}
+		
+ 	}
 }

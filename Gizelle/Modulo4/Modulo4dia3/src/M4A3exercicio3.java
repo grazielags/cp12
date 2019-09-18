@@ -17,6 +17,6 @@ public class M4A3exercicio3 {
 			ano++;
 		} while (Manuel < Joao);
 			
-		JOptionPane.showMessageDialog(null, "Levará: " + ano + " Para manoel ser mais alto do que João");
+		JOptionPane.showMessageDialog(null, "Levará: " + ano + " Para Manoel ser mais alto do que João");
 	}
 }
