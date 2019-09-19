@@ -10,3 +10,11 @@ A função "altera" o valor de custo para incluir o imposto sobre vendas e retor
 """
 
 
+def somaImposto(taxaImposto, custo):
+    custo = custo + (custo * (taxaImposto / 100))
+    return custo
+
+taxaImposto = int(input('Digite a taxa do imposto: '))
+custo = int(input('Digite o custo: '))
+
+print('O custo total é: ', somaImposto(taxaImposto, custo))
