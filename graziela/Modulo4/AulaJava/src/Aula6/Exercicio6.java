@@ -1,4 +1,7 @@
 package Aula6;
+
+import javax.swing.JOptionPane;
+
 /*
  * 6) Faça uma função que recebe a média final de um aluno por parâmetro e retorna
  * o seu conceito, conforme a tabela abaixo:
@@ -10,5 +13,23 @@ package Aula6;
  */
 public class Exercicio6 {
 	public static void main(String[] args) {
+		double nota1 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 1"));
+		double nota2 = Double.parseDouble(JOptionPane.showInputDialog("Digite a nota 2"));
+		double media = (nota1 + nota2) / 2.0;
+		String conceitoFinal = conceito(media);
+		JOptionPane.showMessageDialog(null, "O conceito é: " + conceitoFinal);
+	}
+	
+	public static String conceito(double media) {
+		if (media >= 0 && media < 5) {
+			return "D";
+		} else if (media >= 5 && media < 7) {
+			return "C";
+		} else if (media >= 7 && media < 9) {
+			return "B";
+		} else if (media >= 9 && media <= 10) {
+			return "A";
+		}
+		return "Conceito inválido!";
 	}
 }
