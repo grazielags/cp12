@@ -11,19 +11,28 @@
 
 #usar o while  e tem 5  funções,uma para cada opção
 
-def menu():
-    print("*******************************")
-    print("1 - Somar")
-    print("2 - Subtrair")
-    print("3 - Multiplicar")
-    print("4 - Dividir")
-    print("5 - Sair do programa")
-    print("*******************************")
-menu()
+def soma(numero1, numero2):
+    return numero1 + numero2
+
+def subtracao(numero1, numero2):
+    return numero1 - numero2
+
+def multiplicacao(numero1, numero2):
+    return numero1 * numero2
+
+def divisao(numero1, numero2):
+    return numero1 / numero2
+
+numero1 = int(input('Digite o primeiro número: '))
+numero2 = int(input('Digite o segundo número: '))
+operacao = input('Digite a operação (+, -, *, /)')
 
 
-opcao = int(input("Escolha sua opção: "))
-if opcao == 0 or opcao > 5:
-    print ("Sua opção foi:", opcao, " - Opção inválida")
-elif opcao > 1 and opcao < 5:
-    
+if (operacao == '+'):
+    print(numero1, ' + ', numero2, ' = ', soma(numero1, numero2))
+elif (operacao == '-'):
+    print(numero1, ' - ', numero2, ' = ', subtracao(numero1, numero2))
+elif (operacao == '*'):
+    print(numero1, ' * ', numero2, ' = ', multiplicacao(numero1, numero2))
+elif (operacao == '/'):
+    print(numero1, ' / ', numero2, ' = ', divisao(numero1, numero2))
