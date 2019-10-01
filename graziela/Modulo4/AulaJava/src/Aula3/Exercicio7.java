@@ -1,5 +1,7 @@
 package Aula3;
 
+import javax.swing.JOptionPane;
+
 public class Exercicio7 {
 	public static void main(String[] args) {
 		/*
@@ -16,5 +18,19 @@ public class Exercicio7 {
 		 * 		}
 		 * 	}
 		 */
+		int numeroSorteado = (int)(Math.random() * 11);
+		System.out.println(numeroSorteado);
+		
+		int numeroDigitado = Integer.parseInt(JOptionPane.showInputDialog("Digite um número!"));
+		int qtdTentativas = 1;
+		while (numeroDigitado != numeroSorteado) {
+			if (numeroDigitado > numeroSorteado) {
+				numeroDigitado = Integer.parseInt(JOptionPane.showInputDialog("O número digitado é maior do que o número sorteado. Digite um novo número!"));
+			} else if (numeroDigitado < numeroSorteado) {
+				numeroDigitado = Integer.parseInt(JOptionPane.showInputDialog("O número digitado é menor do que o número sorteado. Digite um novo número!"));
+			}
+			qtdTentativas++;
+		}
+		JOptionPane.showMessageDialog(null, "Parabéns você acerto o número em " + qtdTentativas);
 	}
 }
