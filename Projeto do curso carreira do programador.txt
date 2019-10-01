@@ -24,7 +24,7 @@ Menus:
 		Menu Usuário
 			1 - Remover (Essa opção do menu só estará disponível caso o usuário possua perfil Admin)
 			
-Dados de cadasto do Usuário:
+Dados de cadastro do Usuário:
 	Id
 	Nome
 	Endereço
@@ -55,3 +55,12 @@ Dados que devem ser apresentados quando consultar Livros:
 Dados do Empréstimo:
 	Id do Livro
 	Id do Usuário
+
+
+
+
+
+
+
+
+
