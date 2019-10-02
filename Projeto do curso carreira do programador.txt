@@ -10,7 +10,7 @@ Menus:
 	Somente com login efetuado, ou seja, estar logado:
 		1 - Livros
 		2 - Empréstimos
-		3 - Usuários (Essa opção do menu só estará disponível caso o usuário possua perfil Admin)
+		3 - Remover Usuário (Essa opção do menu só estará disponível caso o usuário possua perfil Admin)
 
 		Menu Livros:
 			1 - Consultar (Qualquer perfil)
@@ -20,10 +20,7 @@ Menus:
 		Menu Empréstimos:
 			1 - Realizar empréstimo de livro
 			2 - Devolver livro
-
-		Menu Usuário
-			1 - Remover (Essa opção do menu só estará disponível caso o usuário possua perfil Admin)
-			
+	
 Dados de cadastro do Usuário:
 	Id
 	Nome

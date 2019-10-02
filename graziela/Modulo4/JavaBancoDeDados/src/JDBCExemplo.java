@@ -84,8 +84,7 @@ public class JDBCExemplo {
 	private static void menuLogado(Connection conexao) {
 		int opcaoMenu = 0;
 		while(opcaoMenu != 3) {
-			opcaoMenu = Integer.parseInt(JOptionPane.showInputDialog("Gerenciamento de usuário"
-																	+ "\n1 - Livros"
+			opcaoMenu = Integer.parseInt(JOptionPane.showInputDialog("1 - Livros"
 																	+ "\n2 - Empréstimos"
 																	+ "\n3 - Voltar"));
 			switch (opcaoMenu) {
@@ -108,17 +107,20 @@ public class JDBCExemplo {
 	private static void menuLogadoAdmin(Connection conexao) throws SQLException {
 		int opcaoMenu = 0;
 		while(opcaoMenu != 4) {
-			opcaoMenu = Integer.parseInt(JOptionPane.showInputDialog("Gerenciamento de usuário"
-																	+ "\n1 - Livros"
+			opcaoMenu = Integer.parseInt(JOptionPane.showInputDialog("1 - Livros"
 																	+ "\n2 - Empréstimos"
 																	+ "\n3 - Remover Usuário"
 																	+ "\n4 - Voltar"));
 			switch (opcaoMenu) {
 				case 1:
-					
+					if (isAdmin == true) {
+						menuLivrosAdmin(conexao);
+					} else {
+						menuLivros(conexao);
+					}
 					break;
 				case 2:
-					
+					menuEmprestimo(conexao);
 					break;
 				case 3:
 					removerUsuario(conexao);
@@ -129,6 +131,78 @@ public class JDBCExemplo {
 				default:
 					JOptionPane.showMessageDialog(null, "Opção inválida!");
 					break;
+			}
+		}
+	}
+
+	private static void menuEmprestimo(Connection conexao) {
+		int opcaoMenu = 0;
+		while(opcaoMenu != 3) {
+			opcaoMenu = Integer.parseInt(JOptionPane.showInputDialog("Gerenciamento de Empréstimos"
+																	+ "\n1 - Realizar empréstimo"
+																	+ "\n2 - Devolver livro"
+																	+ "\n3 - Voltar"));
+			switch (opcaoMenu) {
+				case 1:
+					
+					break;
+				case 2:
+					
+					break;
+				case 3:
+					JOptionPane.showMessageDialog(null, "Voltando!");
+					break;
+				default:
+					JOptionPane.showMessageDialog(null, "Opção inválida!");
+					break;
+			}
+		}
+	}
+
+	private static void menuLivrosAdmin(Connection conexao) throws SQLException {
+		int opcaoMenu = 0;
+		while(opcaoMenu != 4) {
+			opcaoMenu = Integer.parseInt(JOptionPane.showInputDialog("Gerenciamento de livros"
+																	+ "\n1 - Consultar"
+																	+ "\n2 - Cadastrar"
+																	+ "\n3 - Remover"
+																	+ "\n4 - Voltar"));
+			switch (opcaoMenu) {
+				case 1:
+					
+					break;
+				case 2:
+					
+					break;
+				case 3:
+					
+					break;
+				case 4:
+					JOptionPane.showMessageDialog(null, "Voltando!");
+					break;
+				default:
+					JOptionPane.showMessageDialog(null, "Opção inválida!");
+					break;
+			}
+		}
+	}
+
+	private static void menuLivros(Connection conexao) throws SQLException {
+		int opcaoMenu = 0;
+		while(opcaoMenu != 2) {
+			opcaoMenu = Integer.parseInt(JOptionPane.showInputDialog("Gerenciamento de livros"
+					+ "\n1 - Consultar"
+					+ "\n2 - Voltar"));
+			switch (opcaoMenu) {
+			case 1:
+
+				break;
+			case 2:
+				JOptionPane.showMessageDialog(null, "Voltando!");
+				break;
+			default:
+				JOptionPane.showMessageDialog(null, "Opção inválida!");
+				break;
 			}
 		}
 	}
