@@ -44,7 +44,6 @@ public class JDBCExemplo {
     		conexao.close();
     	} catch (SQLException e) {
     		JOptionPane.showMessageDialog(null, e.getMessage());
-			e.printStackTrace();
 		}
     }
 
@@ -81,7 +80,7 @@ public class JDBCExemplo {
 		}
 	}
 
-	private static void menuLogado(Connection conexao) {
+	private static void menuLogado(Connection conexao) throws SQLException {
 		int opcaoMenu = 0;
 		while(opcaoMenu != 3) {
 			opcaoMenu = Integer.parseInt(JOptionPane.showInputDialog("1 - Livros"
@@ -89,10 +88,10 @@ public class JDBCExemplo {
 																	+ "\n3 - Voltar"));
 			switch (opcaoMenu) {
 				case 1:
-					
+					menuLivros(conexao);
 					break;
 				case 2:
-					
+					menuEmprestimo(conexao);
 					break;
 				case 3:
 					JOptionPane.showMessageDialog(null, "Voltando!");
@@ -144,10 +143,10 @@ public class JDBCExemplo {
 																	+ "\n3 - Voltar"));
 			switch (opcaoMenu) {
 				case 1:
-					
+					realizarEmprestimo(conexao);
 					break;
 				case 2:
-					
+					devolverEmprestimo(conexao);
 					break;
 				case 3:
 					JOptionPane.showMessageDialog(null, "Voltando!");
@@ -169,13 +168,13 @@ public class JDBCExemplo {
 																	+ "\n4 - Voltar"));
 			switch (opcaoMenu) {
 				case 1:
-					
+					listarLivros(conexao);
 					break;
 				case 2:
-					
+					cadastrarLivros(conexao);
 					break;
 				case 3:
-					
+					removerLivro(conexao);
 					break;
 				case 4:
 					JOptionPane.showMessageDialog(null, "Voltando!");
@@ -195,7 +194,7 @@ public class JDBCExemplo {
 					+ "\n2 - Voltar"));
 			switch (opcaoMenu) {
 			case 1:
-
+				listarLivros(conexao);
 				break;
 			case 2:
 				JOptionPane.showMessageDialog(null, "Voltando!");
@@ -286,5 +285,120 @@ public class JDBCExemplo {
 		preparedStatement.execute();
 		preparedStatement.close();
 		JOptionPane.showMessageDialog(null, "Usuário adicionado com sucesso!");
+	}
+
+	private static void cadastrarLivros(Connection conexao) throws SQLException {
+		String nome = JOptionPane.showInputDialog("Digite o nome do livro!");
+		String autor = JOptionPane.showInputDialog("Digite o nome do autor!");
+		int anoEdicao = Integer.parseInt(JOptionPane.showInputDialog("Digite o ano de edicao!"));
+
+		StringBuilder sql = new StringBuilder();
+		sql.append("INSERT INTO livro ");
+		sql.append("	(nome, autor, ano_edicao) ");
+		sql.append("values ");
+		sql.append("	(?, ?, ?)");
+		PreparedStatement preparedStatement = conexao.prepareStatement(sql.toString());
+		preparedStatement.setString(1, nome);
+		preparedStatement.setString(2, autor);
+		preparedStatement.setInt(3, anoEdicao);
+
+		// executa
+		preparedStatement.execute();
+		preparedStatement.close();
+	}
+
+	private static void listarLivros(Connection conexao) throws SQLException {
+		String nome;
+		nome = JOptionPane.showInputDialog("Digite parte do nome do livro que deseja buscar");
+		ResultSet lista = listarLivros(conexao, nome);
+		
+		StringBuilder saida = new StringBuilder("");
+		while (lista.next()) {
+			saida.append("Id: " + lista.getString("id"));
+			saida.append("\nNome: " + lista.getString("nome"));
+			saida.append("\nAutor: " + lista.getString("autor"));
+			saida.append("\nAno edição: " + lista.getInt("ano_edicao"));
+			saida.append("\nSitução: " + lista.getString("situacao"));
+			saida.append("\n\n");
+		}
+		// JOptionPane.showMessageDialog(null, saida.toString());
+		JTextArea textArea = new JTextArea(saida.toString());
+		JScrollPane scrollPane = new JScrollPane(textArea);  
+		textArea.setLineWrap(true);  
+		textArea.setWrapStyleWord(true);
+		textArea.setEditable(false);
+		scrollPane.setPreferredSize( new Dimension( 500, 500 ) );
+		JOptionPane.showMessageDialog(null, scrollPane, "Listagem de livros!",  
+		                                       JOptionPane.DEFAULT_OPTION);
+	}
+	
+	private static ResultSet listarLivros(Connection conexao, String nome) throws SQLException {
+		StringBuilder sql = new StringBuilder();
+		sql.append("SELECT l.*, ");
+		sql.append("CASE WHEN (e.id IS NOT NULL) THEN 'Emprestado' ELSE 'Disponivel' END situacao ");
+		sql.append("FROM livro l ");
+		sql.append("LEFT JOIN emprestimo e ON e.id_livro = l.id ");
+		sql.append("WHERE UPPER(l.nome) like ?");
+		PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+		stmt.setString(1, "%" + nome.toUpperCase() + "%");
+
+		// executa
+		return stmt.executeQuery();
+	}
+
+	private static void removerLivro(Connection conexao) throws SQLException {
+		Integer idLivro = Integer.parseInt(JOptionPane.showInputDialog("Digite o id do livro que deseja remover!"));
+		StringBuilder sql = new StringBuilder();
+		sql.append("DELETE FROM livro ");
+		sql.append("WHERE id = ?");
+		PreparedStatement stmt = conexao.prepareStatement(sql.toString());
+		stmt.setInt(1, idLivro);
+
+		// executa
+		if (stmt.executeUpdate() > 0) {
+			JOptionPane.showMessageDialog(null, "Removido com sucesso!");
+		}
+		stmt.close();
+	}
+
+	private static void realizarEmprestimo(Connection conexao) {
+		try {
+			int idLivro = Integer.parseInt(JOptionPane.showInputDialog("Digite o id do livro!"));
+			StringBuilder sql = new StringBuilder();
+			sql.append("INSERT INTO emprestimo ");
+			sql.append("	(id_usuario, id_livro) ");
+			sql.append("values ");
+			sql.append("	(?, ?)");
+			PreparedStatement preparedStatement = conexao.prepareStatement(sql.toString());
+			preparedStatement.setInt(1, idUsuarioLogado);
+			preparedStatement.setInt(2, idLivro);
+
+			// executa
+			preparedStatement.execute();
+			preparedStatement.close();
+			JOptionPane.showMessageDialog(null, "Livro emprestado com sucesso!");
+		} catch(SQLException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage());
+		}
+	}
+
+	private static void devolverEmprestimo(Connection conexao) {
+		try {
+			int idLivro = Integer.parseInt(JOptionPane.showInputDialog("Digite o id do livro que deseja devolver!"));
+			StringBuilder sql = new StringBuilder();
+			sql.append("DELETE FROM emprestimo ");
+			sql.append("WHERE id_usuario = ? ");
+			sql.append("AND id_livro = ? ");
+			PreparedStatement preparedStatement = conexao.prepareStatement(sql.toString());
+			preparedStatement.setInt(1, idUsuarioLogado);
+			preparedStatement.setInt(2, idLivro);
+
+			// executa
+			preparedStatement.execute();
+			preparedStatement.close();
+			JOptionPane.showMessageDialog(null, "Livro devolvido com sucesso!");
+		} catch(SQLException e) {
+			JOptionPane.showMessageDialog(null, e.getMessage());
+		}
 	}
 }
