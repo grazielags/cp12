@@ -13,12 +13,11 @@ public class M4A3exercicio7 {
 			teste = (int)(Math.random() * 11);
 			tentar = Integer.parseInt(JOptionPane.showInputDialog(null, "Tente acertar o numero Randomico gerado: "));
 			if (tentar != teste) {
-				tentativas++;
-				JOptionPane.showMessageDialog(null, "Errado! Numero aleatorio gerado: " + teste);
+			}
+			tentativas++;
+				JOptionPane.showMessageDialog(null, "Errado! Numero aleatorio gerado: " + tentativas);
 			}
 		
 		}
-
-	}
 
 }

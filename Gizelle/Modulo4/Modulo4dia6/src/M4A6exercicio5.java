@@ -12,24 +12,25 @@ public class M4A6exercicio5 {
 //			Triângulo Isósceles: os comprimentos de 2 lados são iguais.
 //			Triângulo Escaleno: os comprimentos dos 3 lados são diferentes.
 
-		for (int i = 0; i < 1; i++) {
-			triangulo();
-		}
-	}
-
-	public static void triangulo() {
-		int A = Integer.parseInt(JOptionPane.showInputDialog("Digite lado A: "));
-		int B = Integer.parseInt(JOptionPane.showInputDialog("Digite lado B: "));
-		int C = Integer.parseInt(JOptionPane.showInputDialog("Digite lado C: "));
 		
-		if (A < (B + C) || B < (A + C) || C < (A + B)) {
-		if (A==B && A==C) {
-			System.out.println("Triângulo Equilátero");
-		}else if (A==B || A==C || B==C) {
-			System.out.println("Triângulo Isóceles");
-		}else
-			System.out.println("Triângulo Escaleno");
-		}
+		double A = Integer.parseInt(JOptionPane.showInputDialog("Digite lado A: "));
+		double B = Integer.parseInt(JOptionPane.showInputDialog("Digite lado B: "));
+		double C = Integer.parseInt(JOptionPane.showInputDialog("Digite lado C: "));
+		triangulo (A, B, C);
 	}
 
+	public static void triangulo(double A, double B, double C) {
+
+		if (A < (B + C) && B < (A + C) && C < (A + B)) {
+			if (A==B && A==C) {
+				System.out.println("Triângulo Equilátero");
+			}else if  (A != B && B != C && B != C) {
+				System.out.println("Triângulo Escaleno");
+			}else {
+				System.out.println("Triângulo Isóceles");
+			}
+		} else {
+			System.out.println("Não é triângulo");
+		}		
+	}
 }
