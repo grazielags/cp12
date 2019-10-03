@@ -143,10 +143,10 @@ public class JDBCExemplo {
 																	+ "\n3 - Voltar"));
 			switch (opcaoMenu) {
 				case 1:
-					
+					realizarEmprestimo(conexao);
 					break;
 				case 2:
-					
+					devolverEmprestimo(conexao);
 					break;
 				case 3:
 					JOptionPane.showMessageDialog(null, "Voltando!");
@@ -329,7 +329,7 @@ public class JDBCExemplo {
 		textArea.setEditable(false);
 		scrollPane.setPreferredSize( new Dimension( 500, 500 ) );
 		JOptionPane.showMessageDialog(null, scrollPane, "Listagem de livros!",  
-		                                       JOptionPane.YES_NO_OPTION);
+		                                       JOptionPane.DEFAULT_OPTION);
 	}
 	
 	private static ResultSet listarLivros(Connection conexao, String nome) throws SQLException {
@@ -376,6 +376,7 @@ public class JDBCExemplo {
 			// executa
 			preparedStatement.execute();
 			preparedStatement.close();
+			JOptionPane.showMessageDialog(null, "Livro emprestado com sucesso!");
 		} catch(SQLException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());
 		}
@@ -395,6 +396,7 @@ public class JDBCExemplo {
 			// executa
 			preparedStatement.execute();
 			preparedStatement.close();
+			JOptionPane.showMessageDialog(null, "Livro devolvido com sucesso!");
 		} catch(SQLException e) {
 			JOptionPane.showMessageDialog(null, e.getMessage());
 		}
