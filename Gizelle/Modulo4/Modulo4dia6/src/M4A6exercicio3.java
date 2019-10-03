@@ -6,18 +6,22 @@ public class M4A6exercicio3 {
 // Faça uma função que recebe um valor inteiro e verifica se o valor é par ou ímpar. 
 // A função deve retornar um valor booleano.
 
-	
-		for (int i = 0; i < 1; i++) {
-			if((ParImpar()  % 2) == 0) {
-				JOptionPane.showMessageDialog(null, ParImpar() + " é número Par");;
-			}else
-				JOptionPane.showMessageDialog(null, ParImpar() + " é número Impar");
-		}
+		int valor = parImpar();
+		JOptionPane.showMessageDialog(null, "O número digitado é " + valor);
 	}
 
-	public static int ParImpar() {
-		int valor = Integer.parseInt(JOptionPane.showInputDialog("Digite um número: "));
-		return valor;
+	public static int parImpar() {
+		int num = Integer.parseInt(JOptionPane.showInputDialog("Digite um número: "));
+			if((num  % 2) == 0) {
+				JOptionPane.showMessageDialog(null, num + " é número Par");;
+			}else
+				JOptionPane.showMessageDialog(null, num + " é número Impar");
+		
+		return num;
 	}
+	
+	
+	
+		
 
 }
