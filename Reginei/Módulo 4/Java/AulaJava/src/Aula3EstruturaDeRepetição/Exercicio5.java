@@ -3,8 +3,11 @@ package Aula3EstruturaDeRepetição;
 public class Exercicio5 {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		//5. Escreva um algoritmo que calcule a média dos números digitados pelo
+		//usuário, se eles forem pares. Termine a leitura se o usuário digitar zero (0).
+		
+		
 	}
 
 }
