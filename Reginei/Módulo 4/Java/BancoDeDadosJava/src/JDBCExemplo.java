@@ -144,10 +144,10 @@ public class JDBCExemplo {
 																	+ "\n3 - Voltar"));
 			switch (opcaoMenu) {
 				case 1:
-					
+					realizarEmprestimo(conexao);
 					break;
 				case 2:
-					
+					devolverLivro(conexao);
 					break;
 				case 3:
 					JOptionPane.showMessageDialog(null, "Voltando!");
