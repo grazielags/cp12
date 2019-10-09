@@ -4,19 +4,21 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
- 
-import br.com.voffice.model.UsuarioModel;
+
 import br.com.voffice.model.ResponseModel;
+import br.com.voffice.model.UsuarioModel;
 import br.com.voffice.repository.UsuarioRepository;
  
 @RestController
-@RequestMapping("/service")
+@CrossOrigin(origins="*")
+@RequestMapping("v1/service")
 public class UsuarioService {
  
 	@Autowired
@@ -67,7 +69,7 @@ public class UsuarioService {
 	 * CONSULTAR TODAS AS PESSOAS
 	 * @return
 	 */
-	@RequestMapping(value="/pessoa", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@RequestMapping(value="/usuario", method = RequestMethod.GET, produces=MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public @ResponseBody List<UsuarioModel> consultar(){
  
 		return this.usuarioRepository.findAll();
